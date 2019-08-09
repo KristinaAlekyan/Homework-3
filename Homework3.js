@@ -15,13 +15,13 @@ of strings in the array. */
 return `Numbers:${countN},Strings:${countS}`;
 }
 
-console.log(arrItemCount([1, '10', 'hi', 2, 3] )); // “Numbers: 3, Strings: 2”
-console.log(arrItemCount([1, 4, 'i am a string', '456']));// “Numbers: 2, Strings: 2” 
+console.log(arrItemCount([1, '10', 'hi', 2, 3] )); // â€œNumbers: 3, Strings: 2â€
+console.log(arrItemCount([1, 4, 'i am a string', '456']));// â€œNumbers: 2, Strings: 2â€ 
 
 
 
 
-/* 3· Given an array consisting from the arrays of numbers (like a two-dimensional array).
+/* 3Â· Given an array consisting from the arrays of numbers (like a two-dimensional array).
 Find sum of each row and print them as an array.*/ 
 		
     let arr=[[3, 4, 5], [1, 0, 0], [4, 5, 4], [8, 8, -1]];
@@ -56,7 +56,7 @@ console.log(oddNumMult([])); //                          []
 
 
 
-/* 5· Given an array of numbers. Create an array containing only elements once.*/;
+/* 5Â· Given an array of numbers. Create an array containing only elements once.*/;
 
 function arrItemsOnce(arr=[]) {
     let res = arr.reduce(function(arrNew, item) {
@@ -74,4 +74,14 @@ console.log( arrItemsOnce([4, 4]));//                      [4]
 
 
 
+/*6. Given an array. Create the array which elements are products between two
+neighbours.*/
 
+//let arr=[3, 7, 12, 5, 20, 0];
+    
+    let arr=[1, 1, 4, 32, 6];
+	let multArray=arr.map(function(element, index){
+	return element*arr[index+1];
+	});
+    multArray.pop();
+    console.log(multArray);
